@@ -56,7 +56,7 @@
     <property name="geometry">
      <rect>
       <x>360</x>
-      <y>220</y>
+      <y>190</y>
       <width>111</width>
       <height>51</height>
      </rect>
@@ -74,20 +74,20 @@
    <widget class="QLabel" name="shape">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>38</y>
-      <width>71</width>
-      <height>51</height>
+      <x>640</x>
+      <y>48</y>
+      <width>81</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Agency FB</family>
-      <pointsize>24</pointsize>
+      <pointsize>20</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>shape:</string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="scale_btn">
@@ -112,9 +112,9 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>450</x>
       <y>40</y>
-      <width>111</width>
+      <width>181</width>
       <height>51</height>
      </rect>
     </property>
@@ -125,13 +125,13 @@
      </font>
     </property>
     <property name="text">
-     <string>Data detail</string>
+     <string>Data detail shape:</string>
     </property>
    </widget>
    <widget class="QComboBox" name="scaler">
     <property name="geometry">
      <rect>
-      <x>730</x>
+      <x>740</x>
       <y>50</y>
       <width>201</width>
       <height>31</height>
@@ -139,7 +139,7 @@
     </property>
     <item>
      <property name="text">
-      <string>standar scale</string>
+      <string>standard scale</string>
      </property>
     </item>
     <item>
@@ -171,6 +171,189 @@
       <width>271</width>
       <height>271</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>400</y>
+      <width>181</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Selct Target Column</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Submit">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>410</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Submit</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Target_name">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>270</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>410</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>24</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Drop Column</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="drop_column">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>410</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>standard scale</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>minmax scale</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>k-means scale</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="drop">
+    <property name="geometry">
+     <rect>
+      <x>1020</x>
+      <y>410</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Drop</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>450</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Convert categorical to</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="scaler_3">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>490</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>standard scale</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>minmax scale</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>k-means scale</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="Submit_3">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>490</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Convert</string>
     </property>
    </widget>
   </widget>

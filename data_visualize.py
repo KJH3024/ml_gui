@@ -18,3 +18,6 @@ class data_:
             column_list.append(i)
         
         return column_list
+    
+    def drop_columns(self, df , column):
+        return df.drop(column, axis=1)
