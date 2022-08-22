@@ -21,11 +21,14 @@ class UI(QMainWindow):
         self.Target_name = self.findChild(QLabel, "Target_name")
         self.dropcolumn = self.findChild(QComboBox, "drop_column")
         self.drop = self.findChild(QPushButton , "drop")
+        self.scaler = self.findChild(QComboBox, "scaler")
+        self.scale_btn = self.findChild(QPushButton , "scale_btn")
         
         self.Browse.clicked.connect(self.get_csv)
         self.columns.clicked.connect(self.target)
         self.Submit.clicked.connect(self.set_target)
         self.drop.clicked.connect(self.dropc)
+        self.scale_btn.clicked.connect(self.scale_value)
         # self.show()
     def filldetails(self, fleg = 1):
         if fleg == 0:
@@ -62,6 +65,18 @@ class UI(QMainWindow):
     def set_target(self):
         self.target_value = self.item
         self.Target_name.setText(self.target_value)
+        
+    def scale_value(self):
+        if self.scaler.currentText() == 'standard scale':
+            self.df = data.standardscale(self.df, self.target_value)
+        
+        elif self.scaler.currentText() == 'minmax scale':
+            self.df = data.minmaxscale(self.df, self.target_value)
+            
+        else:
+            self.df = data.powerscale(self.df, self.target_value)
+            
+        self.filldetails()
         
     def get_csv(self):
         self.file_path, _ = QtWidgets.QFileDialog.getOpenFileName(self, "Open File", "", "csv(*.csv)")

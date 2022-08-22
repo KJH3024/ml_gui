@@ -149,7 +149,7 @@
     </item>
     <item>
      <property name="text">
-      <string>k-means scale</string>
+      <string>power scale</string>
      </property>
     </item>
    </widget>
