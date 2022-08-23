@@ -48,3 +48,35 @@ class data_:
         scaled_features_df[target] = df[target]
         
         return scaled_features_df
+    
+    def convert_categori(self, df, column):
+        le = LabelEncoder()
+        df[column] = le.fit_transform(df[column])
+        
+        return df[column]
+    
+    def fillmean(self, df, column):
+        df[column].fillna(df[column].mean, inplace=True)
+        
+        return df[column]
+    
+    def fillna(self, df, column):
+        df[column].fillna(0, inplace=True)
+        
+        return df[column]
+    
+    def scatter_plot(self,df,x,y,c,marker):
+        plt.figure()
+        plt.scatter(df[x],df[y],c=c,marker=marker)
+        plt.xlabel(x)
+        plt.ylabel(y)
+        plt.title(y + " vs "+ x)
+        plt.show()
+        
+    def line_plot(self,df,x,y,c,marker):
+        plt.figure()
+        plt.plot(df[x],df[y],c=c,marker=marker)
+        plt.xlabel(x)
+        plt.ylabel(y)
+        plt.title(y + " vs "+ x)
+        plt.show()
